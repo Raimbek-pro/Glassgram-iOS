@@ -93,6 +93,7 @@ swift_library(
         "//submodules/UIKitRuntimeUtils:UIKitRuntimeUtils",
         "//submodules/DebugSettingsUI:DebugSettingsUI",
         "//submodules/WallpaperBackgroundNode:WallpaperBackgroundNode",
+        "//submodules/ChatMessageBackground:ChatMessageBackground",
         "//submodules/WebPBinding:WebPBinding",
         "//submodules/Components/ReactionImageComponent:ReactionImageComponent",
         "//submodules/TranslateUI:TranslateUI",

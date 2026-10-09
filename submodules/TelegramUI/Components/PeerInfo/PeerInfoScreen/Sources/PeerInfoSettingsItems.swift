@@ -5,6 +5,7 @@ import AccountContext
 import TelegramPresentationData
 import TelegramCore
 import PhoneNumberFormat
+import SettingsUI
 import ItemListUI
 import SwiftSignalKit
 import PhotoResources
@@ -253,6 +254,10 @@ func settingsItems(data: PeerInfoScreenData?, context: AccountContext, presentat
     } else {
         notificationsWarning = false
     }
+    // Glassgram: settings for the glass message bubbles, first in this section.
+    items[.advanced]!.append(PeerInfoScreenDisclosureItem(id: 100, text: "Glassgram", icon: glassgramSettingsIcon, action: {
+        interaction.openSettings(.glassgram)
+    }))
     items[.advanced]!.append(PeerInfoScreenDisclosureItem(id: 0, label: notificationsWarning ? .badge("!", presentationData.theme.list.itemDestructiveColor) : .none, text: presentationData.strings.Settings_NotificationsAndSounds, icon: PresentationResourcesSettings.notifications, action: {
         interaction.openSettings(.notificationsAndSounds)
     }))

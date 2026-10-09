@@ -1,0 +1,59 @@
+{
+  "fill" : {
+    "linear-gradient" : [
+      "display-p3:0.98265,1.00000,0.87050,1.00000",
+      "display-p3:0.00000,0.20400,0.96783,1.00000"
+    ],
+    "orientation" : {
+      "start" : {
+        "x" : 0.5,
+        "y" : 0
+      },
+      "stop" : {
+        "x" : 0.5,
+        "y" : 0.7
+      }
+    }
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "fill" : {
+            "linear-gradient" : [
+              "display-p3:0.00000,0.00000,0.00000,1.00000",
+              "display-p3:0.50224,0.88085,0.96783,1.00000"
+            ],
+            "orientation" : {
+              "start" : {
+                "x" : 0.49999999999999967,
+                "y" : 0.8626036333452256
+              },
+              "stop" : {
+                "x" : 0.49999999999999967,
+                "y" : 0.45755860440290586
+              }
+            }
+          },
+          "glass" : true,
+          "image-name" : "Vector 22.png",
+          "name" : "Vector 22"
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}

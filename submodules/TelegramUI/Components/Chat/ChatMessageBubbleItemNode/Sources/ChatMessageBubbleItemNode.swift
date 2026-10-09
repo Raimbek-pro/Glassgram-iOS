@@ -4016,7 +4016,22 @@ public class ChatMessageBubbleItemNode: ChatMessageItemView, ChatMessagePreviewI
         strongSelf.backgroundNode.setType(type: backgroundType, highlighted: false, graphics: graphics, maskMode: strongSelf.backgroundMaskMode, hasWallpaper: hasWallpaper, transition: legacyTransition, backgroundNode: presentationContext.backgroundNode)
         strongSelf.backgroundWallpaperNode.setType(type: backgroundType, theme: item.presentationData.theme, essentialGraphics: graphics, maskMode: strongSelf.backgroundMaskMode, backgroundNode: presentationContext.backgroundNode)
         strongSelf.shadowNode.setType(type: backgroundType, hasWallpaper: hasWallpaper, graphics: graphics)
-        
+
+        // Glassgram: draw the bubble as Liquid Glass tinted with the theme's bubble color.
+        let glassBubbleTint: UIColor?
+        switch backgroundType {
+        case .none:
+            glassBubbleTint = nil
+        case .incoming:
+            let bubble = item.presentationData.theme.theme.chat.message.incoming.bubble
+            glassBubbleTint = (hasWallpaper ? bubble.withWallpaper.fill : bubble.withoutWallpaper.fill).first
+        case .outgoing:
+            let bubble = item.presentationData.theme.theme.chat.message.outgoing.bubble
+            glassBubbleTint = (hasWallpaper ? bubble.withWallpaper.fill : bubble.withoutWallpaper.fill).first
+        }
+        let isGlassBubble = strongSelf.backgroundNode.setGlass(tint: glassBubbleTint, isDark: item.presentationData.theme.theme.overallDarkAppearance)
+        strongSelf.backgroundWallpaperNode.hidesContentForGlass = isGlassBubble
+
         strongSelf.backgroundType = backgroundType
         
         let previousBackgroundFrame = strongSelf.backgroundNode.backgroundFrame
