@@ -11,6 +11,10 @@
 
 It is the iOS version of [Glassgram for macOS](https://github.com/Raimbek-pro/Glassgram).
 
+| Glass over a dark wallpaper | Glass over a bright wallpaper | Settings → Glassgram |
+|---|---|---|
+| <img src="images/glassgram/chat-dark.webp" width="260"> | <img src="images/glassgram/chat-blue.webp" width="260"> | <img src="images/glassgram/settings.webp" width="260"> |
+
 ## What's new in Glassgram
 
 ### Liquid Glass message bubbles
